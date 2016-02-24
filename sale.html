@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;}
+    	#sliderSegmentedControl{background: #f5f5f5;border-top: 1px #C2C2C2 solid;position: fixed;z-index: 100;}
+    	#sliderSegmentedControl .mui-active{color: #22C064;}
+    	#sliderProgressBar{width: 30%;margin-left: 20%;background: #22C064;position: fixed;top: 38px;}
+    	#love{width: 50%;float: left;text-align: right;padding-right:20px ;}
+    	#near{float: left;width: 50%;text-align: left;padding-left: 20px;}
+    	.mui-loading{width: 90%;background: #fff;margin-left: 5%;}
+    	.mui-loading ul{width: 100%;float: left;margin-top: 40px;}
+    	.mui-loading ul li{list-style: none;background: #fff;width: 100%;float: left;position: relative;margin-top: 10px;}
+    	.mui-loading ul li img{float: left;padding: 2%;}
+    	.mui-loading ul li h1,h2,h3,h4,p,span{float:left;padding: 2%;text-overflow: ellipsis;font-size: 16px;overflow: hidden;white-space:nowrap;font-weight: 600;}
+    	.mui-loading ul li h1{width: 96%;}
+    	.mui-loading ul li h2{width: 35%;font-size: 20px}
+    	.mui-loading ul li h3{width: 25%;font-size: 14px}
+    	.mui-loading ul li p{width: 20%;font-size: 14px;text-align: right;}
+    	.mui-loading ul li span{width: 20%;font-size: 14px;text-align: left;}
+    	
+    	#item2mobile .mui-loading ul li img{padding: 0%;}
+    </style>
+</head>
+<body>
+
+	<div id="slider" class="mui-slider">
+		<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+			<a class="mui-control-item mui-active" href="#item1mobile" id="love">爱心义卖</a>
+			<a class="mui-control-item" href="#item2mobile" id="near">附近义卖</a>
+		</div>
+		<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+		<div class="mui-slider-group">
+			<div id="item1mobile" class="mui-slider-item mui-control-content">
+				<div class="mui-loading" id="love_sale">
+					<ul>
+						<li><img src="images/sale.jpg"/><h1>卓棒（Jawbone）UP3 蓝牙智能健康运动 </h1><h2>￥499</h2><h3>市场价￥599</h3><p>剩余：</p><span>50件</span></li>
+						<li><img src="images/sale.jpg"/><h1>卓棒（Jawbone）UP3 蓝牙智能健康运动 </h1><h2>￥499</h2><h3>市场价￥599</h3><p>剩余：</p><span>50件</span></li>
+						<li><img src="images/sale.jpg"/><h1>卓棒（Jawbone）UP3 蓝牙智能健康运动 </h1><h2>￥499</h2><h3>市场价￥599</h3><p>剩余：</p><span>50件</span></li>
+					</ul>
+				</div>
+			</div>
+			<div id="item2mobile" class="mui-slider-item mui-control-content">
+				<div class="mui-loading" id="near_sale">
+					<ul>
+						<li><img src="images/sale.jpg"/><h1>店铺名称</h1><h2>店铺名称</h2><h3>店铺义品</h3><p>捐助方式</p><span>5%/件</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
