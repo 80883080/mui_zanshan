@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init({
+		    subpages:[{
+		      url:"sale.html",//子页面HTML地址，支持本地地址和网络地址
+		      id:"sale",//子页面标志
+		      styles:{
+		        top:"40px",
+		        bottom:"50px"
+		      }
+		    }]
+		});
+    </script>
+    
+    <style type="text/css">
+    	*{margin: 0; padding: 0;}
+    	#foot{bottom: 0;background: #000;}
+    	#foot h1{color: #fff;font-size: 14px;float: left;height: 40px;line-height: 40px;}
+    	#foot button{float: right;margin-right: 20px}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">商品详情</h1>
+	</header>
+	
+	<div class="mui-bar" id="foot">
+		<h1>爱心分享</h1>
+		<button type="button" class="mui-btn mui-btn-warning">购买</button>
+	</div>
+</body>
+</html>
