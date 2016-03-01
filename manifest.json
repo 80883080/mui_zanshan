@@ -10,7 +10,7 @@
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "pages/index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -199,6 +199,84 @@
 					"css/mui.min.css",
 					"fonts/mui.ttf"
 				],
+				"priority": 0
+			},
+			"pages/reg.html": {
+				"resources": [
+					"js/mui.min.js",
+					"images/login_bg1.jpg",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/index.html": {
+				"resources": [
+					"images/logo.png",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"images/logo_p.png",
+					"images/login_bg.jpg"
+				],
+				"refer": [
+					"pages/reg.html",
+					"pages/log.html"
+				],
+				"priority": 0
+			},
+			"pages/log.html": {
+				"resources": [
+					"images/login_bg1.jpg",
+					"fonts/mui.ttf",
+					"images/three3.png",
+					"images/three2.png",
+					"images/three1.png",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"pages/sale.html"
+				],
+				"priority": 0
+			},
+			"pages/sale.html": {
+				"resources": [
+					"pages/salelist.html",
+					"images/public3_2.jpg",
+					"images/public1_1.jpg",
+					"images/public4_2.jpg",
+					"images/public2_2.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/salelist.html": {
+				"resources": [
+					"images/sale_icon.jpg",
+					"images/sale.jpg"
+				],
+				"refer": [
+					"pages/shop_more.html"
+				],
+				"priority": 0
+			},
+			"pages/shop_morelist.html": {
+				"resources": [
+					"images/shop.jpg",
+					"images/shop_more.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/shop_more.html": {
+				"resources": [
+					"pages/shop_morelist.html",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

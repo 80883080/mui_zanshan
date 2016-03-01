@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	window.onload = function(){
+      		PageInit();
+      	}
+      	function PageInit(){
+      		AddListener();
+      	}
+      	
+      	function AddListener(){
+      		var pages = document.getElementsByTagName("li");
+      		for (var x in pages) {
+      			pages[x].addEventListener("tap",function(){ 
+      				mui.openWindow({
+					    url: "shop_more.html", 
+					    id:"shop_more"
+					  });
+      			})
+      		}
+      	}
+    </script>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;}
+    	#sliderSegmentedControl{background: #f5f5f5;border-top: 1px #C2C2C2 solid;border-bottom: 1px #C2C2C2 solid;position: fixed;z-index: 100;}
+    	#sliderSegmentedControl .mui-active{color: #22C064;}
+    	#sliderProgressBar{width: 30%;margin-left: 20%;background: #22C064;position: fixed;top: 38px;z-index: 100;}
+    	#love{width: 50%;float: left;text-align: right;padding-right:20px ;}
+    	#near{float: left;width: 50%;text-align: left;padding-left: 20px;}
+    	.mui-loading{width: 90%;background: #fff;margin-left: 5%;}
+    	.mui-loading ul{width: 100%;float: left;margin-top: 40px;}
+    	.mui-loading ul li{list-style: none;background: #fff;width: 100%;float: left;position: relative;margin-top: 10px;}
+    	.mui-loading ul li img{float: left;padding: 2%;}
+    	.mui-loading ul li h1,h2,h3,h4,p,span{float:left;padding: 2%;text-overflow: ellipsis;font-size: 16px;overflow: hidden;white-space:nowrap;font-weight: 600;}
+    	.mui-loading ul li h1{width: 96%;}
+    	.mui-loading ul li h2{width: 70px;font-size: 20px;color: #ea203e;line-height: 20px;}
+    	.mui-loading ul li h3{width: 100px;font-size: 14px;color: #999;line-height: 20px;}
+    	.mui-loading ul li p{width:auto;font-size: 14px;text-align: right;color: #333;line-height: 20px;float: right;}
+    	.mui-loading ul li span{width: auto;font-size: 14px;text-align: left;color: #00d258;line-height: 20px;float: right;margin-right: 10px;}
+    	
+    	#item2mobile .mui-loading ul li img{padding: 0%;}
+    	#item2mobile .mui-loading ul li #icon{height: 50px;width: 50px;background: #fff;float: left;margin-top: -25px;margin-left: 10px;}
+    	#item2mobile .mui-loading ul li #icon img{padding: 3px;}
+    	
+    	#near_sale h1{padding-left: 70px;margin-top: -25px;}
+    	#near_sale h3{float: left;width: auto;margin-left: 10px;line-height: 20px;}
+    	#near_sale p{float: right;width: auto;line-height: 20px;margin-top: 5px;}
+    </style>
+</head>
+<body>
+	<div id="slider" class="mui-slider">
+		<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+			<a class="mui-control-item mui-active" href="#item1mobile" id="love">爱心义卖</a>
+			<a class="mui-control-item" href="#item2mobile" id="near">附近义卖</a>
+		</div>
+		<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+		<div class="mui-slider-group">
+			<div id="item1mobile" class="mui-slider-item mui-control-content">
+				<div class="mui-loading" id="love_sale">
+					<ul>
+						<li><img src="../images/sale.jpg"/><h1>卓棒（Jawbone）UP3 蓝牙智能健康运动运动 </h1><h2>￥499</h2><h3>市场价:599</h3><span>50件</span><p>剩余：</p></li>
+						<li><img src="../images/sale.jpg"/><h1>卓棒（Jawbone）UP3 蓝牙智能健康运动 </h1><h2>￥499</h2><h3>市场价:599</h3><span>50件</span><p>剩余：</p></li>
+						<li><img src="../images/sale.jpg"/><h1>卓棒（Jawbone）UP3 蓝牙智能健康运动 </h1><h2>￥499</h2><h3>市场价:599</h3><span>50件</span><p>剩余：</p></li>
+					</ul>
+				</div>
+			</div>
+			<div id="item2mobile" class="mui-slider-item mui-control-content">
+				<div class="mui-loading" id="near_sale">
+					<ul>
+						<li><img src="../images/sale.jpg"/><div id="icon"><img src="../images/sale_icon.jpg"/></div><h1>店铺名称</h1><h3>店铺义品120件</h3><p>捐助方式5%/件</p></li>
+						<li><img src="../images/sale.jpg"/><div id="icon"><img src="../images/sale_icon.jpg"/></div><h1>店铺名称</h1><h3>店铺义品120件</h3><p>捐助方式5%/件</p></li>
+						<li><img src="../images/sale.jpg"/><div id="icon"><img src="../images/sale_icon.jpg"/></div><h1>店铺名称</h1><h3>店铺义品120件</h3><p>捐助方式5%/件</p></li>
+						<li><img src="../images/sale.jpg"/><div id="icon"><img src="../images/sale_icon.jpg"/></div><h1>店铺名称</h1><h3>店铺义品120件</h3><p>捐助方式5%/件</p></li>
+						<li><img src="../images/sale.jpg"/><div id="icon"><img src="../images/sale_icon.jpg"/></div><h1>店铺名称</h1><h3>店铺义品120件</h3><p>捐助方式5%/件</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>

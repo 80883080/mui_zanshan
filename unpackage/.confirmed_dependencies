@@ -1,0 +1,75 @@
+{
+	"pages/reg.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/login_bg1.jpg",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/index.html": {
+		"resources": [
+			"images/logo.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/logo_p.png",
+			"images/login_bg.jpg"
+		],
+		"refer": [
+			"pages/reg.html",
+			"pages/log.html"
+		]
+	},
+	"pages/log.html": {
+		"resources": [
+			"images/login_bg1.jpg",
+			"fonts/mui.ttf",
+			"images/three3.png",
+			"images/three2.png",
+			"images/three1.png",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"pages/sale.html"
+		]
+	},
+	"pages/sale.html": {
+		"resources": [
+			"pages/salelist.html",
+			"images/public3_2.jpg",
+			"images/public1_1.jpg",
+			"images/public4_2.jpg",
+			"images/public2_2.jpg"
+		],
+		"refer": [
+			"pages/salelist.html"
+		]
+	},
+	"pages/salelist.html": {
+		"resources": [
+			"images/sale_icon.jpg",
+			"images/sale.jpg"
+		],
+		"refer": [
+			"pages/shop_more.html"
+		]
+	},
+	"pages/shop_morelist.html": {
+		"resources": [
+			"images/shop.jpg",
+			"images/shop_more.jpg"
+		]
+	},
+	"pages/shop_more.html": {
+		"resources": [
+			"pages/shop_morelist.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"pages/shop_morelist.html"
+		]
+	}
+}
