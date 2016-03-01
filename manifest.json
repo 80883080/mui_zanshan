@@ -165,27 +165,27 @@
 			"splashscreen": {
 				"ios": {
 					"iphone": {
-						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": ""
+						"default": "images/open.png", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "images/open.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "images/open.png","retina55":"images/open.png","retina47":"images/open.png","retina55l":"images/open.png"
 					},
 					"ipad": {
-						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
-						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
-						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
-						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-						"landscape-retina7": ""
+						"portrait": "images/open.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "images/open.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "images/open.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "images/open.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "images/open.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "images/open.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "images/open.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": "images/open.png"
 					}
 				},
 				"android": {
-					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": ""
+					"mdpi": "images/open.png", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "images/open.png", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "images/open.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "images/open.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "images/open.png"
 				}
 			}
 		}
@@ -246,9 +246,13 @@
 					"images/public3_2.jpg",
 					"images/public1_1.jpg",
 					"images/public4_2.jpg",
-					"images/public2_2.jpg"
+					"images/public2_2.jpg",
+					"js/mui.min.js",
+					"css/mui.min.css"
 				],
-				"refer": [],
+				"refer": [
+					"pages/donat.html"
+				],
 				"priority": 0
 			},
 			"pages/salelist.html": {
@@ -257,7 +261,8 @@
 					"images/sale.jpg"
 				],
 				"refer": [
-					"pages/shop_more.html"
+					"pages/shop_more.html",
+					"pages/sale_more.html"
 				],
 				"priority": 0
 			},
@@ -275,6 +280,154 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/sale_morelist.html": {
+				"resources": [
+					"images/shop.jpg",
+					"images/shop_more.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/sale_more.html": {
+				"resources": [
+					"pages/sale_morelist.html",
+					"images/share.jpg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"pages/sale_buy.html"
+				],
+				"priority": 0
+			},
+			"pages/sale_buy.html": {
+				"resources": [
+					"images/more.jpg"
+				],
+				"refer": [
+					"pages/pay.html"
+				],
+				"priority": 0
+			},
+			"pages/pay.html": {
+				"resources": [
+					"images/pay_icon1.jpg",
+					"images/pay_slected.jpg",
+					"images/pay_icon2.jpg",
+					"images/pay_bg.jpg",
+					"images/pay_icon3.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/donatInfo.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"images/donatimg.jpg",
+					"images/otherSale.jpg",
+					"images/head.jpg",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"pages/don_pay.html"
+				],
+				"priority": 0
+			},
+			"pages/donat_list.html": {
+				"resources": [
+					"images/donat2.jpg",
+					"images/donat1.jpg"
+				],
+				"refer": [
+					"pages/donatInfo.html"
+				],
+				"priority": 0
+			},
+			"pages/donat.html": {
+				"resources": [
+					"images/public1_2.jpg",
+					"images/public3_2.jpg",
+					"pages/donat_list.html",
+					"js/mui.min.js",
+					"images/public4_2.jpg",
+					"images/public2_1.jpg",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"pages/store.html",
+					"pages/sale.html"
+				],
+				"priority": 0
+			},
+			"pages/don_pay.html": {
+				"resources": [],
+				"refer": [
+					"pages/don_buy.html"
+				],
+				"priority": 0
+			},
+			"pages/don_buy.html": {
+				"resources": [
+					"images/more.jpg"
+				],
+				"refer": [
+					"pages/pay.html"
+				],
+				"priority": 0
+			},
+			"pages/store.html": {
+				"resources": [
+					"images/public1_2.jpg",
+					"images/public3_1.jpg",
+					"js/mui.min.js",
+					"images/public4_2.jpg",
+					"css/mui.min.css",
+					"pages/store_list.html",
+					"images/public2_2.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/store_deal.html": {
+				"resources": [
+					"pages/store_deallist.html",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"pages/store_push.html"
+				],
+				"priority": 0
+			},
+			"pages/store_list.html": {
+				"resources": [
+					"images/shop_icon.png"
+				],
+				"refer": [
+					"pages/store_deal.html"
+				],
+				"priority": 0
+			},
+			"pages/store_push.html": {
+				"resources": [],
+				"refer": [
+					"pages/store_success.html"
+				],
+				"priority": 0
+			},
+			"pages/store_success.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/store_success.png"
 				],
 				"refer": [],
 				"priority": 0

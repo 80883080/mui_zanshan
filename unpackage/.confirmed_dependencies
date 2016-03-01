@@ -40,10 +40,13 @@
 			"images/public3_2.jpg",
 			"images/public1_1.jpg",
 			"images/public4_2.jpg",
-			"images/public2_2.jpg"
+			"images/public2_2.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css"
 		],
 		"refer": [
-			"pages/salelist.html"
+			"pages/salelist.html",
+			"pages/donat.html"
 		]
 	},
 	"pages/salelist.html": {
@@ -52,7 +55,8 @@
 			"images/sale.jpg"
 		],
 		"refer": [
-			"pages/shop_more.html"
+			"pages/shop_more.html",
+			"pages/sale_more.html"
 		]
 	},
 	"pages/shop_morelist.html": {
@@ -70,6 +74,140 @@
 		],
 		"refer": [
 			"pages/shop_morelist.html"
+		]
+	},
+	"pages/sale_morelist.html": {
+		"resources": [
+			"images/shop.jpg",
+			"images/shop_more.jpg"
+		]
+	},
+	"pages/sale_more.html": {
+		"resources": [
+			"pages/sale_morelist.html",
+			"images/share.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"pages/sale_morelist.html",
+			"pages/sale_buy.html"
+		]
+	},
+	"pages/sale_buy.html": {
+		"resources": [
+			"images/more.jpg"
+		],
+		"refer": [
+			"pages/pay.html"
+		]
+	},
+	"pages/pay.html": {
+		"resources": [
+			"images/pay_icon1.jpg",
+			"images/pay_slected.jpg",
+			"images/pay_icon2.jpg",
+			"images/pay_bg.jpg",
+			"images/pay_icon3.jpg"
+		]
+	},
+	"pages/donatInfo.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"images/donatimg.jpg",
+			"images/otherSale.jpg",
+			"images/head.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"pages/don_pay.html"
+		]
+	},
+	"pages/donat_list.html": {
+		"resources": [
+			"images/donat2.jpg",
+			"images/donat1.jpg"
+		],
+		"refer": [
+			"pages/donatInfo.html"
+		]
+	},
+	"pages/donat.html": {
+		"resources": [
+			"images/public1_2.jpg",
+			"images/public3_2.jpg",
+			"pages/donat_list.html",
+			"js/mui.min.js",
+			"images/public4_2.jpg",
+			"images/public2_1.jpg",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"pages/donat_list.html",
+			"pages/store.html",
+			"pages/sale.html"
+		]
+	},
+	"pages/don_pay.html": {
+		"refer": [
+			"pages/don_buy.html"
+		]
+	},
+	"pages/don_buy.html": {
+		"resources": [
+			"images/more.jpg"
+		],
+		"refer": [
+			"pages/pay.html"
+		]
+	},
+	"pages/store.html": {
+		"resources": [
+			"images/public1_2.jpg",
+			"images/public3_1.jpg",
+			"js/mui.min.js",
+			"images/public4_2.jpg",
+			"css/mui.min.css",
+			"pages/store_list.html",
+			"images/public2_2.jpg"
+		],
+		"refer": [
+			"pages/store_list.html"
+		]
+	},
+	"pages/store_deal.html": {
+		"resources": [
+			"pages/store_deallist.html",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"pages/store_deallist.html",
+			"pages/store_push.html"
+		]
+	},
+	"pages/store_list.html": {
+		"resources": [
+			"images/shop_icon.png"
+		],
+		"refer": [
+			"pages/store_deal.html"
+		]
+	},
+	"pages/store_push.html": {
+		"refer": [
+			"pages/store_success.html"
+		]
+	},
+	"pages/store_success.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/store_success.png"
 		]
 	}
 }
