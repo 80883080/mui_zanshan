@@ -10,7 +10,7 @@
       	mui.init({
 		    subpages:[{
 		      url:"salelist.html",
-		      id:"sale",
+		      id:"salelist",
 		      styles:{
 		        top:"40px",
 		        bottom:"50px"
@@ -37,6 +37,12 @@
 				    id:"store"
 				  });
       		});
+      		document.getElementById("mine").addEventListener("tap",function(){
+      			mui.openWindow({
+				    url: "mine.html", 
+				    id:"mine"
+				  });
+      		});
       	}
       	
     </script>
@@ -51,14 +57,14 @@
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav" id="header">
-	    <h1 class="mui-title">义卖</h1>
+	    <h1 class="mui-title">我的工会</h1>
 	</header>
 	<div class="mui-bar" id="foot">
 		<ul>
-			<li id="sale"><img src="../images/public1_1.jpg" /></li>
-			<li id="donat"><img src="../images/public2_2.jpg" /></li>
-			<li id="store"><img src="../images/public3_2.jpg" /></li>
-			<li><img src="../images/public4_2.jpg" /></li>
+			<li id="sale"><img src="../images/public11.jpg" /></li>
+			<li id="donat"><img src="../images/public22.jpg" /></li>
+			<li id="store"><img src="../images/public32.jpg" /></li>
+			<li id="mine"><img src="../images/public42.jpg" /></li>
 		</ul>
 	</div>
 </body>

@@ -15,6 +15,16 @@
       	
       	function PageInit(){
       		document.getElementById("login").addEventListener("tap",function(){
+      			function plusReady(){
+					// 全屏显示
+					plus.navigator.setFullscreen( false );
+				}
+				if(window.plus){
+					plusReady();
+				}else{
+					document.addEventListener("plusready",plusReady,false);
+				}
+      			
       			mui.openWindow({
 				    url: "sale.html", 
 				    id:"sale"
@@ -24,7 +34,7 @@
     </script>
     
     <style type="text/css">
-        	body{background: url(../images/login_bg1.jpg) no-repeat center top fixed;background-size:cover;-webkit-background-size:cover;-moz-background-size:cover;-ms-background-size:cover;-o-background-size:cover;}
+        	body{background: url(../images/loginbg1.jpg) no-repeat center top fixed;background-size:cover;-webkit-background-size:cover;-moz-background-size:cover;-ms-background-size:cover;-o-background-size:cover;}
         	.mui-bar{background: none;border: none;box-shadow: none;}
         	.mui-bar a{color: #fff;}
         	.mui-bar h1{color: #fff;font-weight: 600;}

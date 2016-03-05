@@ -9,7 +9,7 @@
     <script type="text/javascript" charset="UTF-8">
       	mui.init({
 		    subpages:[{
-		      url:"donat_list.html",
+		      url:"donatlist.html",
 		      id:"donat",
 		      styles:{
 		        top:"40px",
@@ -37,6 +37,12 @@
 				    id:"store"
 				  });
       		});
+      		document.getElementById("mine").addEventListener("tap",function(){
+      			mui.openWindow({
+				    url: "mine.html", 
+				    id:"mine"
+				  });
+      		});
       	}
       	
       	
@@ -56,10 +62,10 @@
 	</header>
 	<div class="mui-bar" id="foot">
 		<ul>
-			<li id="sale"><img src="../images/public1_2.jpg" /></li>
-			<li id="donat"><img src="../images/public2_1.jpg" /></li>
-			<li id="store"><img src="../images/public3_2.jpg" /></li>
-			<li><img src="../images/public4_2.jpg" /></li>
+			<li id="sale"><img src="../images/public12.jpg" /></li>
+			<li id="donat"><img src="../images/public21.jpg" /></li>
+			<li id="store"><img src="../images/public32.jpg" /></li>
+			<li id="mine"><img src="../images/public42.jpg" /></li>
 		</ul>
 	</div>
 </body>
