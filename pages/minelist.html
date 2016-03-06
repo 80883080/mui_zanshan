@@ -8,6 +8,22 @@
     <link href="../css/mui.min.css" rel="stylesheet"/>
     <script type="text/javascript" charset="UTF-8">
       	mui.init();
+      	window.onload = function(){
+      		var clickArr = ["mineinfo","mineorder","mineVIP","minegrade","minesetting","minemessage","minesetting",]
+      		var clickLi = document.getElementsByTagName("li");
+      		for (var i=0;i<clickLi.length;i++) {
+      			addListener(i);
+      		}
+      		function addListener(i){
+      			clickLi[i].addEventListener("tap",function(){
+      				mui.openWindow({
+					    url: clickArr[i]+".html", 
+					    id:clickArr[i]
+					  });
+      				console.log(clickArr[i])
+      			})
+      		}
+      	}
     </script>
     <style type="text/css">
     	*{margin: 0;padding: 0;font-family: "微软雅黑";list-style: none;}
