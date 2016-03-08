@@ -9,7 +9,7 @@
     <script type="text/javascript" charset="UTF-8">
       	mui.init();
       	window.onload = function(){
-      		var clickArr = ["mineinfo","mineorder","mineVIP","minegrade","minesetting","minemessage","minesetting",]
+      		var clickArr = ["mineinfo","mineorder","mineVIP","minegrade","storeFriend","minemessage","minesetting",]
       		var clickLi = document.getElementsByTagName("li");
       		for (var i=0;i<clickLi.length;i++) {
       			addListener(i);
@@ -20,7 +20,7 @@
 					    url: clickArr[i]+".html", 
 					    id:clickArr[i]
 					  });
-      				console.log(clickArr[i])
+      				
       			})
       		}
       	}

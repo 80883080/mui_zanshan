@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	
+    </script>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;font-family: "微软雅黑";list-style: none;}
+    	.mui-content{width: 100%;height: auto;float: left;overflow: hidden;}
+    	.mui-content ul{width: 100%;float: left;background: #fff;margin-top: 20px;}
+    	.mui-content ul li{float: left;width: 95%;margin-left: 5%;border-bottom: 1px #ccc solid;position: relative;height: 40px;}
+    	.mui-content ul li h1{font-size: 16px;font-weight: 400;float: left;width: 60px;text-align: left;height:30px;line-height: 30px;position:relative;}
+    	.mui-content ul li h1 select{width:100%;float: left;margin:0;line-height: 1;padding:9px;-webkit-appearance: normal!important ;}
+    	.mui-content ul li h1 img{transform:rotate(90deg);height:10px;float: left;position:absolute;top:13px;right:8px;
+								-ms-transform:rotate(90deg); 	/* IE 9 */
+								-moz-transform:rotate(90deg); 	/* Firefox */
+								-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+								-o-transform:rotate(90deg); }
+    	.mui-content ul li:first-child h1{border-right: 1px #ccc solid;}
+    	.mui-content ul input{width: 100%;position: absolute;border: none;background: none;}
+    	.mui-content ul li button{font-size: 12px;float: right;margin-right: 10px;margin-top: 5px;}
+    	.mui-content #makesure{width: 90%;margin: 20px 5%;background: #f16a19;height: 40px;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">修改手机</h1>
+	</header>
+	<div class="mui-content">
+	    <ul>
+	    	<li><h1><select name="hdksah">
+	    		<option value="">+86</option>
+	    		<option value="">+46</option>
+	    		<option value="">+06</option>
+	    	</select><img src="../images/more.jpg" alt="" />
+	    	</h1><input type="text" placeholder="请输入原手机号"/><button type="button" class="mui-btn mui-btn-outlined">获取验证码</button></li>
+	    	<li><h1>新密码</h1><input type="text" placeholder="请输入验证码"/></li>
+	    </ul>
+	    
+	    <button type="button" class="mui-btn mui-btn-warning" id="makesure">确定</button>
+
+	</div>
+</body>
+</html>

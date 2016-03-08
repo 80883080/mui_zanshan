@@ -8,6 +8,14 @@
     <link href="../css/mui.min.css" rel="stylesheet"/>
     <script type="text/javascript" charset="UTF-8">
       	mui.init();
+      	window.onload = function(){
+      		document.getElementById("manage").addEventListener("tap",function(){
+      			mui.openWindow({
+				    url: "storeProduct.html", 
+				    id:"storeProduct"
+				  });
+      		});
+      	}
     </script>
 </head>
 <style type="text/css">
@@ -49,7 +57,7 @@
     		<li><div class="pic"><img src="../images/sale.jpg"/></div><div><h1>卓棒（Jawbone）UP3 蓝牙智能健康运动</h1><h2>￥54.00</h2></div></li>
     	</ul>
     	<div id="guanli">
-    		<button type="button" class="mui-btn mui-btn-success">管理商品</button>
+    		<button type="button" class="mui-btn mui-btn-success" id="manage">管理商品</button>
     	</div>
 	</div>
 </body>
