@@ -13,7 +13,9 @@
 		      id:"donat",
 		      styles:{
 		        top:"40px",
-		        bottom:"50px"
+		        bottom:"50px",
+		        bounce: 'vertical',
+				bounceBackground:"#ffffff"
 		      }
 		    }]
 		});
@@ -22,25 +24,37 @@
       		document.getElementById("sale").addEventListener("tap",function(){
       			mui.openWindow({
 				    url: "sale.html", 
-				    id:"sale"
+				    id:"sale",
+				    show:{
+				    	 aniShow:"none",
+				    }
 				  });
       		});
       		document.getElementById("donat").addEventListener("tap",function(){
       			mui.openWindow({
 				    url: "donat.html", 
-				    id:"donat"
+				    id:"donat",
+				    show:{
+				    	 aniShow:"none",
+				    }
 				  });
       		});
       		document.getElementById("store").addEventListener("tap",function(){
       			mui.openWindow({
 				    url: "store.html", 
-				    id:"store"
+				    id:"store",
+				    show:{
+				    	 aniShow:"none",
+				    }
 				  });
       		});
       		document.getElementById("mine").addEventListener("tap",function(){
       			mui.openWindow({
 				    url: "mine.html", 
-				    id:"mine"
+				    id:"mine",
+				    show:{
+				    	 aniShow:"none",
+				    }
 				  });
       		});
       	}
@@ -49,23 +63,24 @@
     </script>
     <style type="text/css">
     	*{margin: 0;padding: 0;}
-    	#header{box-shadow: none;border-bottom:1px solid #c2c2c2 ;}
+    	#header{box-shadow: none;border-bottom:1px solid #c2c2c2 ;background: #fff;}
     	#foot{bottom: 0;height: 50px;}
     	#foot ul{width: 100%;height: 100%;float: left;}
     	#foot ul li{float: left;width: 25%;height: 100%;list-style: none;text-align: center;cursor: pointer;}
     	#foot ul li img{height: 80%;margin-top: 8%;}
+    	.mui-title{font-family: "微软雅黑";font-size: 16px;}
     </style>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav" id="header">
-	    <h1 class="mui-title">义卖</h1>
+	    <h1 class="mui-title">捐助</h1>
 	</header>
 	<div class="mui-bar" id="foot">
 		<ul>
-			<li id="sale"><img src="../images/public12.jpg" /></li>
-			<li id="donat"><img src="../images/public21.jpg" /></li>
-			<li id="store"><img src="../images/public32.jpg" /></li>
-			<li id="mine"><img src="../images/public42.jpg" /></li>
+			<li id="sale"><img src="../images/public12.png" /></li>
+			<li id="donat"><img src="../images/public21.png" /></li>
+			<li id="store"><img src="../images/public32.png" /></li>
+			<li id="mine"><img src="../images/public42.png" /></li>
 		</ul>
 	</div>
 </body>

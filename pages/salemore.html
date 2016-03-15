@@ -13,7 +13,9 @@
 		      id:"salemorelist",//子页面标志
 		      styles:{
 		        top:"40px",
-		        bottom:"50px"
+		      	bottom:"50px",
+		        bounce: 'vertical',
+				bounceBackground:"#ffffff"
 		      }
 		    }]
 		});
@@ -30,10 +32,13 @@
     
     <style type="text/css">
     	*{margin: 0; padding: 0;}
-    	#foot{bottom: 0;background: #000;height: 50px;}
-    	#foot h1{color: #fff;font-size: 14px;float: left;height: 40px;line-height: 40px;}
-    	#foot button{float: right;margin-right: 20px;}
+    	.mui-bar{background: #fff;}
+    	#foot{bottom: 0;background: rgba(0, 0, 0, 0.9);height: 50px;}
+    	#foot h1{color: #ccc;font-size: 14px;float: left;height: 40px;line-height: 40px;font-family: "微软雅黑";font-weight: lighter;}
+    	#foot button{float: right;margin-right: 20px;background: #fd6e3e;font-family: "微软雅黑";border:0;width:90px;height:35px;font-size: 16px;;}
     	#foot img{float: left;height: 50%;margin:15px 10px;}
+    	.mui-bar h1{font-family: "微软雅黑";font-weight: bold;}
+
     </style>
 </head>
 <body>
@@ -43,7 +48,7 @@
 	</header>
 	
 	<div class="mui-bar" id="foot">
-		<img src="../images/share.jpg"/>
+		<img src="../images/share.png"/>
 		<h1>爱心分享</h1>
 		<button type="button" class="mui-btn mui-btn-warning" id="buyBtn">购买</button>
 	</div>

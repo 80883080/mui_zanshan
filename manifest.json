@@ -12,8 +12,8 @@
 	},
 	"launch_path": "pages/index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
-		"name": "",/*开发者名称*/
-		"email": "",/*开发者邮箱地址*/
+		"name": "Octopus",/*开发者名称*/
+		"email": "80883080@qq.com",/*开发者邮箱地址*/
 		"url": "http://www.dcloud.io"
 	},
 	"permissions": {
@@ -104,7 +104,7 @@
 	"plus": {
 		"splashscreen": {
 			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
-			"waiting": true
+			"waiting": true,"delay":"1000"
 		},
 		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
 		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
@@ -215,7 +215,9 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"images/logo_p.png",
-					"images/login_bg.jpg"
+					"images/login_bg.jpg",
+					"images/logop.png",
+					"images/loginbg.jpg"
 				],
 				"refer": [
 					"pages/reg.html",
@@ -231,7 +233,9 @@
 					"images/three2.png",
 					"images/three1.png",
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/loginbg1.jpg",
+					"images/login.png"
 				],
 				"refer": [
 					"pages/sale.html"
@@ -246,21 +250,34 @@
 					"images/public4_2.jpg",
 					"images/public2_2.jpg",
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/public22.jpg",
+					"images/public11.jpg",
+					"images/public32.jpg",
+					"images/public42.jpg",
+					"images/public22.png",
+					"images/public11.png",
+					"images/public42.png",
+					"images/public32.png"
 				],
 				"refer": [
-					"pages/donat.html"
+					"pages/donat.html",
+					"pages/store.html"
 				],
 				"priority": 0
 			},
 			"pages/salelist.html": {
 				"resources": [
 					"images/sale_icon.jpg",
-					"images/sale.jpg"
+					"images/sale.jpg",
+					"images/saleicon.jpg",
+					"js/mui.min.js",
+					"css/mui.min.css"
 				],
 				"refer": [
 					"pages/shop_more.html",
-					"pages/sale_more.html"
+					"pages/sale_more.html",
+					"pages/salemore.html"
 				],
 				"priority": 0
 			},
@@ -318,7 +335,12 @@
 					"images/pay_slected.jpg",
 					"images/pay_icon2.jpg",
 					"images/pay_bg.jpg",
-					"images/pay_icon3.jpg"
+					"images/pay_icon3.jpg",
+					"images/payicon2.jpg",
+					"images/payicon3.jpg",
+					"images/payslected.jpg",
+					"images/payicon1.jpg",
+					"images/paybg.jpg"
 				],
 				"refer": [],
 				"priority": 0
@@ -330,10 +352,12 @@
 					"images/otherSale.jpg",
 					"images/head.jpg",
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/1.mp4"
 				],
 				"refer": [
-					"pages/don_pay.html"
+					"pages/don_pay.html",
+					"pages/donpay.html"
 				],
 				"priority": 0
 			},
@@ -355,7 +379,14 @@
 					"js/mui.min.js",
 					"images/public4_2.jpg",
 					"images/public2_1.jpg",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/public12.jpg",
+					"images/public21.jpg",
+					"pages/donatlist.html",
+					"images/public32.jpg",
+					"images/public42.jpg",
+					"images/public12.png",
+					"images/public21.png"
 				],
 				"refer": [
 					"pages/store.html",
@@ -387,9 +418,18 @@
 					"images/public4_2.jpg",
 					"css/mui.min.css",
 					"pages/store_list.html",
-					"images/public2_2.jpg"
+					"images/public2_2.jpg",
+					"images/public31.jpg",
+					"pages/storelist.html",
+					"images/public22.jpg",
+					"images/public12.jpg",
+					"images/public42.jpg",
+					"images/public31.png"
 				],
-				"refer": [],
+				"refer": [
+					"pages/mine.html",
+					"pages/donat.html"
+				],
 				"priority": 0
 			},
 			"pages/store_deal.html": {
@@ -426,6 +466,241 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"images/store_success.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/donatlist.html": {
+				"resources": [
+					"images/donat2.jpg"
+				],
+				"refer": [
+					"pages/donatInfo.html"
+				],
+				"priority": 0
+			},
+			"pages/storelist.html": {
+				"resources": [
+					"images/shopicon.png"
+				],
+				"refer": [
+					"pages/storedeal.html"
+				],
+				"priority": 0
+			},
+			"pages/salemorelist.html": {
+				"resources": [
+					"images/shop.jpg",
+					"images/shopmore.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/salemore.html": {
+				"resources": [
+					"images/share.png",
+					"pages/salemorelist.html",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"pages/salebuy.html"
+				],
+				"priority": 0
+			},
+			"pages/salebuy.html": {
+				"resources": [
+					"images/more.jpg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"pages/pay.html"
+				],
+				"priority": 0
+			},
+			"pages/donpay.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"pages/donbuy.html"
+				],
+				"priority": 0
+			},
+			"pages/donbuy.html": {
+				"resources": [
+					"images/more.jpg"
+				],
+				"refer": [
+					"pages/pay.html"
+				],
+				"priority": 0
+			},
+			"pages/storedeal.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"pages/storedeallist.html"
+				],
+				"refer": [
+					"pages/storepush.html"
+				],
+				"priority": 0
+			},
+			"pages/storesuccess.html": {
+				"resources": [
+					"images/storesuccess.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/storepush.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"pages/storesuccess.html"
+				],
+				"priority": 0
+			},
+			"pages/minelist.html": {
+				"resources": [
+					"images/messageZhongxin.jpg",
+					"images/sheZhi.jpg",
+					"images/myQuan.jpg",
+					"images/myFriend.jpg",
+					"images/mineBanner.jpg",
+					"images/myOrder.jpg",
+					"images/myJifen.jpg",
+					"images/VIP5.png",
+					"images/more.jpg",
+					"images/perInfo.jpg",
+					"images/head.jpg"
+				],
+				"refer": [
+					"pages/minegrade.html",
+					"pages/mineorder.html",
+					"pages/mineinfo.html",
+					"pages/mineVIP.html",
+					"pages/minemessage.html",
+					"pages/storeFriend.html",
+					"pages/minesetting.html"
+				],
+				"priority": 0
+			},
+			"pages/mine.html": {
+				"resources": [
+					"images/public41.jpg",
+					"pages/minelist.html",
+					"images/public32.jpg",
+					"images/public41.png",
+					"images/public22.png",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"images/public12.png",
+					"images/public32.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/minegrade.html": {
+				"resources": [
+					"images/grade.jpg",
+					"images/gored.jpg",
+					"fonts/mui.ttf",
+					"images/myshop.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/mineorder.html": {
+				"resources": [
+					"images/shop.jpg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/rubish.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/mineinfo.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"images/more.jpg",
+					"images/head.jpg",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"pages/minenumber.html",
+					"pages/minepassword.html"
+				],
+				"priority": 0
+			},
+			"pages/mineVIP.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/VIP1.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/minemessage.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/message.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/storeFriend.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/shop.png",
+					"images/VIP5.png",
+					"images/head.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/minesetting.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/more.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/minenumber.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/more.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/minepassword.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
