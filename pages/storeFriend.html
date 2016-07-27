@@ -6,12 +6,14 @@
 		<title></title>
 		<script src="../js/mui.min.js"></script>
     	<link href="../css/mui.min.css" rel="stylesheet"/>
+    	<script type="text/javascript" src="../js/md5.js" ></script>
+    	<script type="text/javascript" src="../js/core.js" ></script>
     	
 	</head>
 	<style>
 	    *{margin: 0;padding: 0;font-family: "微软雅黑";}
 	    .mui-bar{background: #fff;}
-	   .zimu{width:100%;height:auto;margin-top:45px;position: relative;}
+	   .zimu{width:100%;height:auto;position: relative;overflow: hidden;margin-top: 50px;}
 	   .zimu h3{font-size: 16px;line-height:30px;font-weight: lighter;color: #666;float: left;display: block;height:20px;width:100%;
 	   			margin-left:3%;}
 	   .zimu ul{background: #fff;width: 100%;height:auto;float: left;}
@@ -33,14 +35,13 @@
 		    <h1 class="mui-title">我的义友</h1>
 		</header>	
 		<div class="zimu">
-			<h3 id="A">A</h3>
 			<ul>
 				<li><img src="../images/head.jpg" alt="" /><span><img src="../images/VIP5.png" alt="" /></span>
 					<a href="">anidm</a><em><img src="../images/shop.png" alt="" /></em>
 				</li>
 			</ul>
 		</div>
-		<div class="zimu">
+		<!--<div class="zimu">
 			<h3 id="B">B</h3>
 			<ul>
 				<li><img src="../images/head.jpg" alt="" /><span><img src="../images/VIP5.png" alt="" /></span>
@@ -112,8 +113,8 @@
 					<a href="">anidm</a><em><img src="../images/shop.png" alt="" /></em>
 				</li>
 			</ul>
-		</div>
-		<div class="nav">
+		</div>-->
+		<!--<div class="nav">
 			<ul>
 				<li><a href="">#</a></li>
 				<li><a href="#A">A</a></li>
@@ -124,6 +125,30 @@
 				<li><a href="#F">F</a></li>
 				
 			</ul>
-		</div>
+		</div>-->
 	</body>
+	<script type="text/javascript" charset="UTF-8">
+  		mui.init();
+  		window.onload=function(){
+  			var code = new core();
+			var userInfo = JSON.parse(localStorage["user"])
+			var data = {act:'MyFriends',member_id:userInfo.uid};
+			code.sendXhr(data,successAddFeedback,"MyFriends");
+			function successAddFeedback(xhr){
+				var friend = xhr.msg;
+				var index=""
+				for(var i=0;i<friend.length;i++){
+					var index0="<li><img src="+friend[i].friend_tomavatar+"<a href=''>"+friend[i].friend_tomname;
+					if(friend[i].isstore==1){
+						index0+='</a><em><img src="../images/shop.png" alt="" /></em></li>'
+					}else{
+						index0+='</a></li>'
+					}
+					index+=index0;
+				}
+				mui(".zimu ul")[0].innerHTML=index;
+			}
+  		}
+  		
+  	</script>	
 </html>

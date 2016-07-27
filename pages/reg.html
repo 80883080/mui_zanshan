@@ -6,6 +6,7 @@
     <title>注册</title>
     <script src="../js/mui.min.js"></script>
     <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../js/md5.js" ></script>
     <script type="text/javascript" src="../js/core.js" ></script>
     <style type="text/css">
         	body{background: url(../images/loginbg1.jpg) no-repeat center top fixed;background-size:cover;-webkit-background-size:cover;-moz-background-size:cover;-ms-background-size:cover;-o-background-size:cover;}
@@ -51,16 +52,17 @@
   	mui("#login")[0].addEventListener("tap",reg);
   	
 	function sendCode(){
-		var mobile = mui("#input-num")[0].value;
-		if(mobile == "" || mobile.length != 11){
+		var mobiles = mui("#input-num")[0].value;
+		if(mobiles == "" || mobiles.length != 11){
 			alert("请正确输入手机号码")
 		}else{
 			var code = new core();
-			var data = {act:'sendCode',mobile:'15546343080'};
-			code.sendXhr(data,"http://103.27.5.53:8070/App/MyCenterApi.ashx",successCode);
+			var data = {act:'sendCode',mobile:mobiles};
+			code.sendXhr(data,successCode,"sendCode");
 		}
 	}
 	function successCode(xhr){
+		plus.nativeUI.toast( xhr.msg);
 		mui("#verify_btn")[0].removeEventListener("tap",sendCode);
 		setTime = setInterval(interFun,1000);
 	}
@@ -108,11 +110,14 @@
 	
 	function regSuccess(){
 		var code = new core();
-		var data = {act:'register',mobile:'15546343080',pwd:'15546343080',cpwd:'15546343080',code:'15546343080'};
-		code.sendXhr(data,"http://103.27.5.53:8070/App/MyCenterApi.ashx",successReg);
+		var regMobile = mui("#input-num")[0].value;
+		var regPwd = mui("#input-password1")[0].value;
+		var regCode = mui("#input-verify")[0].value
+		var data = {act:'register',mobile:regMobile,pwd:regPwd,cpwd:regPwd,code:regCode};
+		code.sendXhr(data,successReg,"register");
 	}
 	function successReg(xhr){
-		
+		plus.nativeUI.toast(xhr.msg);
 	}
 </script>
     
