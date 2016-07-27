@@ -6,33 +6,6 @@
     <title>登录</title>
     <script src="../js/mui.min.js"></script>
     <link href="../css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="UTF-8">
-      	mui.init();
-      	
-      	window.onload=function(){
-      		PageInit();
-      	}
-      	
-      	function PageInit(){
-      		document.getElementById("login").addEventListener("tap",function(){
-      			function plusReady(){
-					// 全屏显示
-					plus.navigator.setFullscreen( false );
-				}
-				if(window.plus){
-					plusReady();
-				}else{
-					document.addEventListener("plusready",plusReady,false);
-				}
-      			
-      			mui.openWindow({
-				    url: "sale.html", 
-				    id:"sale"
-				});
-      		})
-      	}
-    </script>
-    
     <style type="text/css">
         	body{background: url(../images/loginbg1.jpg) no-repeat center top fixed;background-size:cover;-webkit-background-size:cover;-moz-background-size:cover;-ms-background-size:cover;-o-background-size:cover;}
         	.mui-bar{background: none;border: none;box-shadow: none;}
@@ -82,4 +55,45 @@
 		    </div>
 		</div>
 </body>
+<script type="text/javascript" charset="UTF-8">
+  	mui.init();
+  	window.onload=function(){
+  		PageInit();
+  	}
+  	
+  	function PageInit(){
+  		document.getElementById("login").addEventListener("tap",function(){
+  			function plusReady(){
+				// 全屏显示
+				plus.navigator.setFullscreen( false );
+			}
+			if(window.plus){
+				plusReady();
+			}else{
+				document.addEventListener("plusready",plusReady,false);
+			}
+  			
+  			mui.openWindow({
+			    url: "sale.html", 
+			    id:"sale"
+			});
+  		})
+  	}
+  	mui("#verify_btn")[0].addEventListener("tap",log);
+  	
+	function log(){
+		var mobile = mui("#input-num")[0].value;
+		if(mobile == "" || mobile.length != 11){
+			alert("请正确输入手机号码")
+		}else{
+			var code = new core();
+			var data = {act:'sendCode',mobile:'15546343080'};
+			code.sendXhr(data,"http://103.27.5.53:8070/App/MyCenterApi.ashx",successCode);
+		}
+	}
+	function successCode(xhr){
+		mui("#verify_btn")[0].removeEventListener("tap",sendCode);
+		setTime = setInterval(interFun,1000);
+	}
+</script>
 </html>
